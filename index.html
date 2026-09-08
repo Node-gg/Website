@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Script Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            background: #2d2d2d;
+            color: #00ffcc;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 10px;
+            resize: none;
+            font-family: monospace;
+            box-sizing: border-box;
+        }
+        .verify-box {
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        .verify-box input {
+            width: 60px;
+            padding: 5px;
+            background: #2d2d2d;
+            color: white;
+            border: 1px solid #444;
+            border-radius: 4px;
+            text-align: center;
+        }
+        button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        button:disabled {
+            background: #333;
+            cursor: not-allowed;
+            color: #777;
+        }
+        button:hover:not(:disabled) {
+            background: #005999;
+        }
+        #status {
+            margin-top: 10px;
+            font-size: 13px;
+            text-align: center;
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="container">
+        <h2>Protected Script Hub</h2>
+        <p style="font-size: 13px; color: #aaa;">Solve the anti-bot check to unlock the copy button.</p>
+        
+        <!-- Your Script Box -->
+        <textarea id="scriptText" readonly>-- Put your script code here
+print("Welcome to my script!")</textarea>
+
+        <!-- Simple Anti-Bot Verification -->
+        <div class="verify-box">
+            <label for="answer">Anti-Bot: What is 4 + 3? </label>
+            <input type="text" id="answer" placeholder="?" onkeyup="checkBot()">
+        </div>
+
+        <!-- Copy Button (Locked until verified) -->
+        <button id="copyBtn" onclick="copyScript()" disabled>Copy Script</button>
+        <div id="status"></div>
+    </div>
+
+    <script>
+        function checkBot() {
+            const userAnswer = document.getElementById('answer').value.trim();
+            const copyBtn = document.getElementById('copyBtn');
+            
+            // Answer to 4 + 3 is 7
+            if (userAnswer === '7') {
+                copyBtn.disabled = false;
+                document.getElementById('status').innerText = "Verified! Button unlocked.";
+            } else {
+                copyBtn.disabled = true;
+                document.getElementById('status').innerText = "";
+            }
+        }
+
+        function copyScript() {
+            const scriptText = document.getElementById('scriptText');
+            scriptText.select();
+            
+            navigator.clipboard.writeText(scriptText.value).then(() => {
+                const status = document.getElementById('status');
+                status.innerText = "Script copied to clipboard!";
+                setTimeout(() => {
+                    status.innerText = "Verified! Button unlocked.";
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
