@@ -2405,7 +2405,7 @@ async function attempt(ctx, opts) {
   const want = (ctx.params && ctx.params.get("payload"));
   const mode = (ctx.params && ctx.params.get("mode")) || "";
   if (want !== "") {
-    iface.payload = (mode === "goldhen")
+    iface.payload = (mode === "custom")
       ? await loadEnabler(want || "goldhen.bin", k, kbase, hostFree)
       : await loadPayload(want || "hen.bin");
   }
