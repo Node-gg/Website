@@ -5,6 +5,7 @@
 
 var TARGET = {
   hen: "log=1&afterglow=run&mode=goldhen&payload=goldhen.bin",
+  diag: "log=1&afterglow=run&payload=custom-diagnostic.bin",
 };
 
 var AUTOSTART_SECONDS = 5;
