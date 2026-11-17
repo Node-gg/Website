@@ -6,6 +6,7 @@
 var TARGET = {
   hen: "log=1&afterglow=run&mode=goldhen&payload=goldhen.bin",
   ps4hen: "log=1&afterglow=run&payload=hen.bin",
+  custom: "log=1&afterglow=run&payload=custom-hen.bin",
 };
 
 var AUTOSTART_SECONDS = 5;
