@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Custom HEN</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .ch-title{font-size:30px;font-weight:800;letter-spacing:.04em;color:#0a84ff;text-shadow:0 0 12px #000;margin:0}
+      .ch-sub{font-size:15px;color:#cfd8e6;margin:6px 0 0;text-align:center}
+      .ch-features{margin:18px 0 0;padding:14px 16px;border:1px solid #1e2732;border-radius:8px;background:#11151b}
+      .ch-features h2{margin:0 0 8px;font-size:14px;color:#7fd0a0;text-transform:uppercase;letter-spacing:.08em}
+      .ch-features ul{margin:0;padding-left:18px;columns:2;column-gap:24px;font-size:13px;line-height:1.7;color:#c8ced8}
+      .ch-note{margin:12px 0 0;font-size:12px;color:#7c8798}
+    </style>
   </head>
   <body>
     <!-- Every run starts from here. The referrer guard in jb.js arms the chain
@@ -13,40 +21,16 @@
     <div id="brand"><b>Custom HEN</b></div>
 
     <div class="shell">
-      <img class="meme" src="meme.png" alt="" />
-
       <main class="panel">
+        <p class="ch-title" style="text-align:center">Custom HEN</p>
+        <p class="ch-sub">By Who &mdash; pre-release 0.1.0</p>
+
         <p class="lede">PS4 firmware 12.00 &ndash; 14.02</p>
 
         <form class="pick" id="pick">
           <label class="opt">
             <input type="radio" name="payload" value="hen" checked />
             <span>Custom HEN</span>
-          </label>
-
-          <label class="opt">
-            <input type="radio" name="payload" value="fallback" />
-            <span>Backup (unbranded)</span>
-          </label>
-
-          <label class="opt">
-            <input type="radio" name="payload" value="patchtest" />
-            <span>Custom HEN + kernel patchset (TEST)</span>
-          </label>
-
-          <label class="opt">
-            <input type="radio" name="payload" value="nopatch" />
-            <span>Custom HEN - no kernel patches (TEST)</span>
-          </label>
-
-          <label class="opt">
-            <input type="radio" name="payload" value="minimal" />
-            <span>Custom HEN - minimal features (TEST)</span>
-          </label>
-
-          <label class="opt">
-            <input type="radio" name="payload" value="nofix" />
-            <span>Custom HEN - no exploit fixes (TEST)</span>
           </label>
 
           <label class="opt opt-auto">
@@ -58,6 +42,23 @@
           <p class="count" id="count"></p>
           <p class="count" id="cache" aria-live="polite"></p>
         </form>
+
+        <section class="ch-features">
+          <h2>Included features</h2>
+          <ul>
+            <li>Jailbreak &amp; sandbox escape</li>
+            <li>Live shell patch (no restart)</li>
+            <li>Homebrew enabler</li>
+            <li>FTP server</li>
+            <li>BinLoader server</li>
+            <li>Cheat menu (JSON / SHN / MC4)</li>
+            <li>Plugin loader</li>
+            <li>Debug settings</li>
+            <li>FPS counter &amp; scanlines</li>
+            <li>KLog server</li>
+          </ul>
+          <p class="ch-note">Exploit stage: afterglow &middot; payload engine: Custom HEN pre-release 0.1.0</p>
+        </section>
       </main>
     </div>
 

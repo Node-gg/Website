@@ -5,11 +5,6 @@
 
 var TARGET = {
   hen: "log=1&afterglow=run&mode=custom&payload=custom-hen.bin",
-  fallback: "log=1&afterglow=run&mode=custom&payload=backup.bin",
-  patchtest: "log=1&afterglow=run&mode=custom&payload=hen-withpatch.bin",
-  nopatch: "log=1&afterglow=run&payload=hen-nopatch.bin",
-  minimal: "log=1&afterglow=run&payload=hen-minimal.bin",
-  nofix: "log=1&afterglow=run&payload=hen-nofix.bin",
 };
 
 var AUTOSTART_SECONDS = 5;
