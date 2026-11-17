@@ -4,7 +4,8 @@
  * in jb.js arms the chain only when the run page was reached from here. */
 
 var TARGET = {
-  hen: "log=1&afterglow=run&payload=hen.bin",
+  hen: "log=1&afterglow=run&mode=goldhen&payload=goldhen.bin",
+  ps4hen: "log=1&afterglow=run&payload=hen.bin",
 };
 
 var AUTOSTART_SECONDS = 5;
