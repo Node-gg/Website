@@ -5,7 +5,7 @@
 
 var TARGET = {
   hen: "log=1&afterglow=run&mode=custom&payload=custom-hen.bin",
-  backup: "log=1&afterglow=run&mode=custom&payload=backup.bin",
+  fallback: "log=1&afterglow=run&mode=custom&payload=backup.bin",
 };
 
 var AUTOSTART_SECONDS = 5;
